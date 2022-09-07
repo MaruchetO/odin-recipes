@@ -2,24 +2,70 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-    <meta charset=“UTF-8”>
+    <meta charset="UTF-8" name= "viewport" content= "width=device-width, initial-scale=1.0">
     <title>Odin Recipes</title>
-    <link rel=“stylesheet” href=“style.css”>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Odin Recipes</h1>
-    <ol> 
-        <li> 
-            <a href="recipes\padthai.html" target="_blank">Pad Thai</a>
-        </li>
-        <li>
-            <a href="recipes\thaibasilchicken.html" target="_blank">Thai Basil Chicken</a>
-        </li>
-        <li>
-            <a href="recipes\thaisweeticedtea.html" target="_blank">Thai Sweet Iced Tea</a>
-        </li>
-    </ol>
+    <header>
+        <h1>Odin Recipes</h1>
+    </header>
+
+    <section class="recipe-menu text-center"> 
+        <div class="row-menu">
+            <section class="container-md col">
+                <section class="caption">
+                    <a href="recipes\padthai.html" target="_blank">Pad Thai</a>
+                </section>
+                <figure class="img-section">
+                    <img class="img-preview rounded"
+                        src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1023388.jpg"
+                        alt="Pad Thai">
+                </figure>
+            </section>
+
+            <section class="container-md col">
+                <section class="caption">
+                    <a href="recipes\thaibasilchicken.html" target="_blank">Thai Basil Chicken</a>
+                </section>
+            
+                <figure class="img-section">
+                    <img class="img-preview rounded"
+                        src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F43%2F2021%2F07%2F15%2F4507925-spicy-thai-basil-chicken-pad-krapow-gai-photo-by-chef-john-cropped.jpg"
+                        alt="Thai basil chicken on rice">
+                </figure>
+            </section>
+
+            <section class="container-md col">
+                <section class="caption">
+                    <a href="recipes\thaisweeticedtea.html" target="_blank">Thai Sweet Iced Tea</a>
+                </section>
+            
+                <figure class="img-section">
+                    <img class="img-preview rounded"
+                        src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F7532188.jpg"
+                        alt="Thai Sweet Iced Tea">
+                </figure>
+            </section>
+        </div>
+    </section>
+
+    <form class="email" onsubmit="send(); return false">
+        <label>Send recipes to email&nbsp;</label>
+        <input autocomplete="off" id="email" placeholder="Email" type="email">
+        <input type="submit">
+    </form>
+
 </body>
+
+<script>
+    function send() {
+        let email = document.querySelector('#email').value;
+        alert("Recipes sent to " + email);
+    }
+</script>
 
 </html>

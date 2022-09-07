@@ -2,9 +2,11 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-    <meta charset=“UTF-8”>
+    <meta charset="UTF-8" name= "viewport" content= "width=device-width, initial-scale=1.0">
     <title>Thai Sweet Iced Tea</title>
-    <link rel=“stylesheet” href=“style.css”>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
@@ -12,18 +14,18 @@
         <h1>Thai Sweet Iced Tea</h1>
     </header>
 
-    <figure id="img-section">
-        <img id="img"
+    <figure class="img-section">
+        <img class="img-fluid"
             src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F7532188.jpg"
             alt="Thai Sweet Iced Tea">
     </figure>
 
-    <div id="description">
+    <section class="description">
         <h2>Description</h2>
         <p>A delicious Thai iced tea for a refreshing afternoon</p>
-    </div>
+    </section>
 
-    <div id="ingredients">
+    <section class="ingredients">
         <h2>Ingredients</h2>
         <ul>
             <li>2 cups water</li>
@@ -36,9 +38,9 @@
             <li>¼ cup and 2 teaspoons condensed milk</li>
             <li>crushed ice, as needed</li>
         </ul>
-    </div>
+    </section>
 
-    <div id="steps">
+    <section class="steps">
         <h2>Steps</h2>
         <ol>
             <li>Bring water to a boil in a saucepan. Stir in tea leaves, vanilla extract, cardamom, cloves, and cinnamon. Cover and
@@ -47,7 +49,20 @@
             refrigerator for 2 hours.</li>
             <li>Fill glasses with crushed ice. Pour tea into glasses and top with condensed milk.</li>
         </ol>
-    </div>
+    </section>
+
+    <form class="email" onsubmit="send(); return false">
+        <label>Send the recipe to email&nbsp;</label>
+        <input autocomplete="off" id="email" placeholder="Email" type="email">
+        <input type="submit">
+    </form>
 </body>
+
+<script>
+    function send() {
+        let email = document.querySelector('#email').value;
+        alert("Recipe sent to " + email);
+    }
+</script>
 
 </html>

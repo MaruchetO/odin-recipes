@@ -2,9 +2,11 @@
 <html lang="en-US" dir="ltr">
 
 <head>
-    <meta charset=“UTF-8”>
+    <meta charset="UTF-8" name= "viewport" content= "width=device-width, initial-scale=1.0">
     <title>Pad Thai</title>
-    <link rel=“stylesheet” href=“style.css”>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
@@ -12,18 +14,18 @@
         <h1>Pad Thai</h1>
     </header>
     
-    <figure id="img-section" > 
-        <img id="img" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1023388.jpg"
+    <figure class="img-section" > 
+        <img class="img-fluid" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F1023388.jpg"
             alt="Pad Thai">
     </figure>
 
-    <div id="description"> 
+    <section class="description"> 
         <h2>Description</h2>
         <p>Pad Thai is the Thai menu that features a tamarind paste, vinegar, sugar, and fish sauce mixture over perfectly stir-fried eggs, chicken breast, and
         rice noodles, garnished with peanuts, chives, and fresh bean sprouts.</p>
-    </div>
+    </section>
     
-    <div id="ingredients">
+    <section class="ingredients">
         <h2>Ingredients</h2>
         <ul>
             <li>12 ounces dried rice noodles</li>
@@ -44,9 +46,9 @@
             <li>1 tablespoon paprika, or to taste</li>
             <li>1 lime, cut into wedges</li>
         </ul>
-    </div>
+    </section>
         
-    <div id="steps">
+    <section class="steps">
         <h2>Steps</h2>
         <ol>
             <li>Place rice noodles in a large bowl and cover with several inches of room temperature water; let soak for 30 to 60
@@ -60,7 +62,21 @@
             <li>Stir in tamarind mixture, 1½ tablespoons sugar, and salt; cook until noodles are tender, 3 to 5 minutes. Stir in
             peanuts; cook until heated through, 1 to 2 minutes. Garnish with bean sprouts, chives, paprika, and lime wedges.</li>
         </ol>
-    </div>
+    </section>
+
+    <form class="email" onsubmit="send(); return false">
+        <label>Send the recipe to email&nbsp;</label>
+        <input autocomplete="off" id="email" placeholder="Email" type="email">
+        <input type="submit">
+    </form>
+
 </body>
+
+<script>
+    function send() {
+        let email = document.querySelector('#email').value;
+        alert("Recipe sent to " + email);
+    }
+</script>
 
 </html>
